@@ -1,0 +1,28 @@
+/* Header.css */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4b4b4b;
+  border-bottom: #ffcc00 2px solid;
+}
+
+.company-logo img {
+  max-height: 40px;
+}
+
+.auth-buttons button {
+  background-color: #f0f0f0; /* Light gray background for the button */
+  color: #333; /* Dark gray text color for the button */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  background-color: #ffcc00; /* Yellow accent color on hover */
+  color: #333; /* Dark gray text color on hover */
+}

@@ -1,0 +1,151 @@
+/* .recent-chats {
+  display: flex;
+  flex: 0 0 25%;
+  border: 1px solid blue;
+  background-color: #B9B9B9;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: auto; 
+}
+
+.search-and-new-chat {
+  display: flex;
+  height: 3rem;
+  width: 100%;
+}
+
+
+
+.new-chat {
+  flex: 0 0 30%;
+  border: 1px solid green;
+}
+
+.RecentChat {
+  display: flex;
+  border: 1px solid green;
+
+  .profile-pic {
+    flex: 0 0 20%;
+    border: 1px solid blue;
+  }
+
+  .chat-info {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 80%;
+    border: 1px solid red;
+
+    .ChatSender {
+      & > h3{
+        margin: 8px 4px;
+        color: red;
+      }
+    }
+    .ChatMessage{
+      & > p{
+        margin: 4px 4px;
+        font-size: .9rem;
+        color: blue;
+      }
+    }
+  }
+}
+
+#new-chat{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+} */
+
+
+ /* RecentChats.css */
+
+/* Styles for the RecentChats component */
+.recent-chats {
+  display: flex;
+  flex: 0 0 25%;
+  background-color: #f0f0f0; /* Add a slight gray background color */
+  flex-direction: column;
+  min-height: 0;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 100vh; /* Set the height to 100% */
+}
+
+.search-and-new-chat {
+  display: flex;
+  height: 3rem;
+}
+
+.search {
+  flex: 0 0 70%;
+  
+  #search-bar{
+    margin: 10px;
+    height: 2.5rem;
+    width: 95%;
+    border-radius: 10px;
+  }
+}
+
+.new-chat {
+  flex: 0 0 30%;
+  border: 1px solid green;
+
+  #new-chat{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover{
+      background-color: #ccc;
+    }
+  }
+}
+
+.RecentChat {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat-info {
+  flex: 0 0 80%;
+  margin-left: 10px;
+}
+
+.DeleteChat{
+  flex: 0 0 20%;
+  height: 100%;
+  width: 100%;
+  color: red;
+  cursor: pointer;
+
+  #delete-chat{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover{
+      background-color: red;
+      color: white;
+    }
+  }
+}
+
+.ChatSender h3 {
+  margin: 8px 0;
+  color: red;
+} 
+

@@ -1,0 +1,12 @@
+.main-container{
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.chat-screen{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 75%;
+}
