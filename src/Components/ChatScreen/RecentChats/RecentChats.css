@@ -1,151 +1,103 @@
-/* .recent-chats {
-  display: flex;
-  flex: 0 0 25%;
-  border: 1px solid blue;
-  background-color: #B9B9B9;
-  flex-direction: column;
-  min-height: 0;
-  padding: 0 0.5rem;
-  box-sizing: border-box;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  overflow-y: auto; 
-}
-
-.search-and-new-chat {
-  display: flex;
-  height: 3rem;
-  width: 100%;
-}
-
-
-
-.new-chat {
-  flex: 0 0 30%;
-  border: 1px solid green;
-}
-
-.RecentChat {
-  display: flex;
-  border: 1px solid green;
-
-  .profile-pic {
-    flex: 0 0 20%;
-    border: 1px solid blue;
-  }
-
-  .chat-info {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 80%;
-    border: 1px solid red;
-
-    .ChatSender {
-      & > h3{
-        margin: 8px 4px;
-        color: red;
-      }
-    }
-    .ChatMessage{
-      & > p{
-        margin: 4px 4px;
-        font-size: .9rem;
-        color: blue;
-      }
-    }
-  }
-}
-
-#new-chat{
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-} */
-
-
- /* RecentChats.css */
-
-/* Styles for the RecentChats component */
 .recent-chats {
   display: flex;
   flex: 0 0 25%;
-  background-color: #f0f0f0; /* Add a slight gray background color */
+  background-color: #fcf5ee;
   flex-direction: column;
   min-height: 0;
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
   box-sizing: border-box;
-  overflow-y: auto;
+  overflow-y: hidden;
   height: 100vh; /* Set the height to 100% */
+  /* border-right: #7496B0 2px solid; */
 }
 
-.search-and-new-chat {
-  display: flex;
-  height: 3rem;
-}
-
-.search {
-  flex: 0 0 70%;
-  
-  #search-bar{
-    margin: 10px;
-    height: 2.5rem;
-    width: 95%;
-    border-radius: 10px;
+@media screen and (min-width: 1500px) {
+  .recent-chats {
+    flex: 0 0 15%;
   }
 }
 
-.new-chat {
-  flex: 0 0 30%;
-  border: 1px solid green;
-
+.search-and-new-chat {
+  padding: 4px;
+  /* background-color: #e7dac7; */
+  /* border-bottom: #937047 1px solid; */
+  /* padding-top: 5px; */
+  display: flex;
+  height: 3rem;
   #new-chat{
-    border: 1px solid black;
+    border: none;
+    background-color: #FF8000;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 200;
     height: 100%;
     width: 100%;
-    background-color: transparent;
     cursor: pointer;
 
+    transition: 0.5s ease;
+
     &:hover{
-      background-color: #ccc;
+      background-color: #E67300;
     }
+
   }
 }
 
 .RecentChat {
   display: flex;
   align-items: center;
-  padding: 8px;
-  border-bottom: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 2.5px;
+  margin: 4px;
+  /* background-color: #e7dac7 ; */
+  /* border: 1px solid #937047; */
+
+  &:hover{
+    background-color: #f5eedf;
+  }
+}
+
+.chat-list{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #FF8000;
+  border-radius: 10px;
+  margin: 2px;
 }
 
 .chat-info {
   flex: 0 0 80%;
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
+
+
 
 .DeleteChat{
   flex: 0 0 20%;
   height: 100%;
   width: 100%;
-  color: red;
+
   cursor: pointer;
 
   #delete-chat{
-    border: 1px solid black;
     height: 100%;
     width: 100%;
     background-color: transparent;
     cursor: pointer;
 
-    &:hover{
-      background-color: red;
-      color: white;
-    }
   }
 }
 
-.ChatSender h3 {
-  margin: 8px 0;
-  color: red;
-} 
-
+a{
+  text-decoration: none;
+  color: black;
+}

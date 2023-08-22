@@ -2,27 +2,44 @@
 
 header {
   display: flex;
+  color: #402000;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #4b4b4b;
-  border-bottom: #ffcc00 2px solid;
+  background-color: #FFFFFF;
+  border-bottom: #000000 2px solid;
+  user-select: none;
 }
 
-.company-logo img {
+.company-logo {
   max-height: 40px;
+
+  transition: 0.3s ease;
 }
 
-.auth-buttons button {
-  background-color: #f0f0f0; /* Light gray background for the button */
-  color: #333; /* Dark gray text color for the button */
+.button-bar{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.button-bar button{
+  background-color: #FF8000; /* Light gray background for the button */
+  color: whitesmoke; /* Dark gray text color for the button */
   border: none;
   padding: 8px 16px;
+  font-weight: 700;
   border-radius: 4px;
   cursor: pointer;
+
+  transition: 0.5s ease;
 }
 
-.auth-buttons button:hover {
-  background-color: #ffcc00; /* Yellow accent color on hover */
-  color: #333; /* Dark gray text color on hover */
+.button-bar button:hover {
+  background-color: #E67300; 
+  color: #FFFFFF; /* Dark gray text color on hover */
+}
+
+.company-logo:hover {
+  color: #E67300; /* Dark gray text color on hover */
 }

@@ -17,6 +17,7 @@ const MessageInput = ({ onSendMessage }) => {
 
   const handleSendMessage = () => {
     if (message.trim() !== "") {
+      console.log("Sending message: " + message);
       onSendMessage(message);
       setMessage("");
     }
@@ -31,7 +32,7 @@ const MessageInput = ({ onSendMessage }) => {
         onChange={handleChange}
         onKeyPress={handleKeyPress}
       />
-      <button onClick={handleSendMessage}>Send</button>
+      <button onClick={handleSendMessage}></button>
     </div>
   );
 };

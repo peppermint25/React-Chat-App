@@ -1,19 +1,40 @@
 import React from "react";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const LogOut = () => {
+    navigate('/')
+
+  };
+
+  const Files = () => {
+    navigate('/files')
+
+  };
+
+  const Chat = () => {
+    navigate('/chat')
+
+  };
+
   return (
     <header>
       {/* Company Logo */}
-      <div className="company-logo">
+      <div className="company-logo" onClick={Chat}>
         {/* Add your company logo image here */}
-        <img src="/path/to/your/company-logo.png" alt="Company Logo" />
+        <img src="/path/to/your/company-logo.png" alt="[Logo img]" />
+        <span id="company-name">[name]</span>
       </div>
 
-      {/* Sign Up/Sign In Button */}
-      <div className="auth-buttons">
-        {/* Add your sign-up/sign-in button code here */}
-        <button>Sign Out</button>
+      <div className="button-bar">
+        <button onClick={Files}>Files</button>
+        <button onClick={LogOut}>
+          <FontAwesomeIcon icon="fa-solid fa-arrow-right-from-bracket" />
+          Sign Out</button>
       </div>
     </header>
   );
