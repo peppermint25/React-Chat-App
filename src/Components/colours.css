@@ -1,0 +1,11 @@
+:root{
+  --hover-colour: #7299B3;
+  --darker-colour: #97B7CC;
+  /* --user-message-colour: #7d5445; */
+  --user-message-colour: #455D7D;
+  --other-message-colour: #d2d2d2;
+  --lighter-colour: #D6EFFF;
+  --background-colour: #e8f2fe;
+  --chat-background-colour: #ffffff;
+  
+}

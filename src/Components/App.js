@@ -3,7 +3,7 @@ import {
         BrowserRouter as Router,
         Routes,
         Route,
-         } from 'react-router-dom';
+        } from 'react-router-dom';
 import ChatScreen from './ChatScreen/ChatScreen';
 import Auth from './Auth/Auth';
 import FileUpload from './FileUpload/FileUpload';

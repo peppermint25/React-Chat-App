@@ -1,18 +1,21 @@
 /* CurrentChat.css */
 .chat {
+    user-select: none;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--chat-background-colour);
     overflow: hidden;
     position: relative;
 }
 
 
 .message-screen{
+    user-select:text;
+    caret-color: transparent;
     display: flex;
     flex-direction: column;
-    padding: 10px 10px 0 10px;
+    padding: 5px 5px 0 5px;
     flex: 0 0 90%;
     overflow-y: auto;
     max-height: 90vh;
@@ -20,28 +23,55 @@
 
 .send-message{
     display: flex;
+    /* border-top: 1px solid var(--user-message-colour); */
+
     flex: 0 0 5%;
-    padding: 1px 0;}
+    padding: 1px 0;
+}
 
 .message {
     display: flex;
-    padding: 5px 10px;
-    margin-bottom: 8px;
-    border-radius: 8px;
-    font-size: 14px;
-    max-width: 90%;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    max-width: 70%;
+}
+
+.message:first-child {
+    margin-top: 0px !important;
 }
 
 .message.user {
-    background-color: #BF6000;
+    background-color: var(--user-message-colour);
     color: #FFFFFF;
+    border-bottom-right-radius: 0px;
     align-self: flex-end;
 }
 
+.message.user + .message.user {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 2px;
+}
+
+div.message.user.last-message {
+    border-bottom-right-radius: 15px !important;
+    margin-top: 5px;
+}
+
 .message.other {
-    background-color: #ffbe7d;
+    background-color: var(--other-message-colour);
+    /* border: 1px solid black; */
     color: #000000;
+    border-bottom-left-radius: 0px;
     align-self: flex-start;
+}
+
+.message.other + .message.other {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 2px;
 }
 
 .message-list{

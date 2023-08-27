@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Header from "../ChatScreen/Header/Header";
 import "./FileUpload.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
 const FileUpload = () => {
     const [uploadedFiles, setUploadedFiles] = useState([]);
@@ -71,50 +73,52 @@ const FileUpload = () => {
                     id="file-input"
                 />
             </div>
-            <div className="file-container">
-                <div className="uploaded-files-list">
-                    <h2>Uploaded Files:</h2>
-                    <ul>
-                        {uploadedFiles.map((file, index) => (
-                        <li id="file" key={index}>
-                            <div className="file-info">
-                                <div className="info main">
-                                    <div className="main">
+            <div className="uploaded-files-list">
+                <h2 className="file-title">Uploaded Files:</h2>
+                <div className="files-list">
+                    {uploadedFiles.map((file, index) => (
+                    <div className="file" key={index}>
+                        <div className="file-info">
+                            <div className="info main">
+                                <div className="main">
                                     <strong>Name: </strong>
-                                    {file.name}
-                                    </div>
-                                    <div className="main">
-                                    <strong>Size: </strong>
-                                    {formatFileSize(file.size)}
-                                    </div>
+                                        {file.name}
                                 </div>
-                                <div className="info sub">
-                                    <div className="sub">
-                                    <strong>Type: </strong> {file.type}
-                                    </div>
-                                    <div className="sub">
-                                    <strong>Date: </strong> {file.date}
-                                    </div>
+                                <div className="main">
+                                    <strong>Size: </strong>
+                                        {formatFileSize(file.size)}
                                 </div>
                             </div>
-                            <div className="file-delete">
-                                <button onClick={() => handleDeleteFile(index)}>
-                                    <div className="delete-icon"></div>
-                                </button>
-                            </div>   
-                        </li>
-                        ))}
-                    </ul>
-                    <div className="bottom-bar">
-                        <div className="file-count">
-                            <strong>Number of Files: </strong> {uploadedFiles.length}
+                            <div className="info sub">
+                                <div className="sub">
+                                    <strong>Type: </strong> {file.type}
+                                </div>
+                                <div className="sub">
+                                    <strong>Date: </strong> {file.date}
+                                </div>
+                            </div>
                         </div>
-                        {uploadedFiles.length > 0 && (
-                            <button className="delete-all-button" onClick={handleDeleteAllFiles}>
-                                Delete All Files
+                        <div className="file-delete">
+                            <button onClick={() => handleDeleteFile(index)}>
+                                <div className="delete-icon"></div>
                             </button>
-                        )}
+                        </div>   
                     </div>
+                    ))}
+                </div>
+                <div className="bottom-bar">
+                    <div className="file-count">
+                        <strong>Number of Files: </strong> {uploadedFiles.length}
+                    </div>
+                    {uploadedFiles.length > 0 && (
+                        <div className="delete-all">
+                            <span>Delete all files:  </span> 
+                            <button className="delete-all-button" onClick={handleDeleteAllFiles}>
+                                <FontAwesomeIcon icon={faTrashAlt} />
+                            </button>
+                        </div>
+                        
+                    )}
                 </div>
             </div>
         </div>

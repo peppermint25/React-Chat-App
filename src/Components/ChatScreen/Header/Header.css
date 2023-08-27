@@ -2,12 +2,12 @@
 
 header {
   display: flex;
-  color: #402000;
+  color: var(--user-message-colour);
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #FFFFFF;
-  border-bottom: #000000 2px solid;
+  background-color: var(--background-colour);
+  border-bottom: var(--user-message-colour) 2px solid;
   user-select: none;
 }
 
@@ -15,6 +15,8 @@ header {
   max-height: 40px;
 
   transition: 0.3s ease;
+
+  cursor: pointer;
 }
 
 .button-bar{
@@ -24,7 +26,7 @@ header {
 }
 
 .button-bar button{
-  background-color: #FF8000; /* Light gray background for the button */
+  background-color: var(--user-message-colour); /* Light gray background for the button */
   color: whitesmoke; /* Dark gray text color for the button */
   border: none;
   padding: 8px 16px;
@@ -36,10 +38,6 @@ header {
 }
 
 .button-bar button:hover {
-  background-color: #E67300; 
+  background-color: var(--hover-colour); 
   color: #FFFFFF; /* Dark gray text color on hover */
-}
-
-.company-logo:hover {
-  color: #E67300; /* Dark gray text color on hover */
 }

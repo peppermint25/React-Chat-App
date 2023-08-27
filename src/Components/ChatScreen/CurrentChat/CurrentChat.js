@@ -15,14 +15,22 @@ const CurrentChat = ({ chat, onSendMessage }) => {
     <div className="chat">
       <div className="message-screen">
         <div className="message-list">
-          {chat.messages.map((message, index) => (
-            <div
-              key={index}
-              className={`message ${message.sender === "user" ? "user" : "other"}`}
-            >
-              {message.text}
-            </div>
-          ))}
+        {chat.messages.map((message, index) => {
+            const isLastMessage =
+              index === chat.messages.length - 1 ||
+              chat.messages[index + 1].sender !== message.sender;
+
+            return (
+              <div
+                key={index}
+                className={`message ${message.sender === "user" ? "user" : "other"} ${
+                  isLastMessage ? "last-message" : ""
+                }`}
+              >
+                {message.text}
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="send-message">

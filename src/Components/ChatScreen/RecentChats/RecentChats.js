@@ -1,10 +1,13 @@
 import React from "react";
 import "./RecentChats.css";
 import { v4 as uuidv4 } from "uuid";
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, useParams } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquarePlus } from "@fortawesome/free-regular-svg-icons";
 
 const RecentChats = ({ chats, onChatClick, onNewChat, onDeleteChat, setChats }) => {
   const navigate = useNavigate();
+  const { chatId } = useParams();
 
   const handleChatClick = (chatId) => {
     onChatClick(chatId);
@@ -14,21 +17,20 @@ const RecentChats = ({ chats, onChatClick, onNewChat, onDeleteChat, setChats }) 
   const handleNewChat = () => {
     const newChat = {
       id: uuidv4(),
-      name: `Chat ${chats.length + 1}`,
       messages: [],
     };
     onNewChat(newChat);
   };
 
   const handleDeleteChat = (chatId) => {
-    onDeleteChat(chatId); // Call the onDeleteChat function from props
+    onDeleteChat(chatId);
   };
 
   return (
     <div className="recent-chats">
       <div className="search-and-new-chat">
         <button id="new-chat" onClick={handleNewChat}>
-          +
+            <FontAwesomeIcon icon={faSquarePlus} />  
         </button>
       </div>
       <div className="chat-list">
@@ -36,8 +38,7 @@ const RecentChats = ({ chats, onChatClick, onNewChat, onDeleteChat, setChats }) 
           <Link
             to={`/chat/${chat.id}`}
             key={chat.id}
-            className="RecentChat"
-            onClick={() => handleChatClick(chat.id)}
+            className={`RecentChat ${chat.id === chatId ? "active" : ""}`}            onClick={() => handleChatClick(chat.id)}
           >
             <div className="chat-info">
               <div className="ChatMessage">

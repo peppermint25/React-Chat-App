@@ -1,51 +1,95 @@
 /* FileUpload.css */
 .file-upload-screen {
-  background-color: #fbf9f9;
+  background-color: var(--chat-background-colour);
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
 .file-container {
-  flex: 1;
+  width: 100%;
+  flex-wrap: 1;
   padding: 20px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
+
 
 .file-upload-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  background-color: #aaabac;
+  background-color: var(--darker-colour);
   color: #fff;
   user-select: none;
 }
 
 .add-files-button{
-  background-color: #888888;
+  background-color: var(--user-message-colour);
   padding: 4px 10px;
   margin-top: 6px;
   border-radius: 4px;
   cursor: pointer;
-
+  
+  transition: 0.5s ease;
+  
   &:hover{
-    background-color: #6d6d6d;
+    background-color: var(--hover-colour);
   }
 }
 
-#file{
-  border: 0.025px solid #ffe26f;
+.uploaded-files-list{
+  overflow-y: auto;
+}
+
+.file-title{
+  user-select: none;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.files-list{
+  display: flex;
+  margin: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  gap: 10px;
+
+}
+
+.file{
+  border: 1px solid var(--user-message-colour);
   display: flex;
   flex-direction: row;
-  width: 100%;
-  background-color: rgb(225, 225, 225);
+  /* flex: 1 1 33%; */
+  flex-basis: calc(50% - 10px);
+  max-width: 50%;
+  /* width:  45%; */
+  background-color: var(--background-colour);
   border-radius: 10px;
+  margin-bottom: 10px;
 
   &:hover{
-    background-color: rgba(237, 237, 221, 0.8);
+    background-color: var(--darker-colour);
   }
 }
+
+@media screen and (max-width: 900px) {
+  .file{
+    flex-basis: calc(100% - 10px);
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .file{
+    flex-basis: calc(33% - 10px);
+    max-width: 33%;
+  }
+} 
 
 .file-info{
   display: flex;
@@ -109,10 +153,22 @@
   font-size: 1.5rem;
   flex-direction: row;
   gap: 10px;
+  margin: 20px;
+  margin-top: 10px;
   justify-content: space-between;
 }
 
+.delete-all{
+  /* width: 20%; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
 .delete-all-button{
+  background-color: transparent;
+  border: none;
   display: flex;
   font-size: 1.5rem;
   font-weight: 100;
@@ -138,13 +194,4 @@
 
 .file-input {
   display: none;
-}
-
-.uploaded-files-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.uploaded-files-list li {
-  margin-bottom: 5px;
 }

@@ -1,11 +1,7 @@
-/* MessageInput.css */
-/* MessageInput.css */
 .message-input {
   display: flex;
   width: 100%; /* Take up the full width of the chat-area */
-  /* background-color: #B09F86; */
   padding: 10px;
-  /* border-top: 1px solid #ccc; */
   box-sizing: border-box;
 }
 
@@ -13,8 +9,9 @@
 .message-input input {
   flex: 1;
   padding: 8px;
+  height: 24px;
   border: none;
-  background-color: #fcf5ee;
+  background-color: var(--lighter-colour);
   border-radius: 4px;
 }
 
@@ -23,7 +20,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: #BF6000;
+  background-color: var(--user-message-colour);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -48,7 +45,7 @@
 }
 
 .message-input button:hover {
-  background-color: #FF8000;
+  background-color: var(--hover-colour);
 }
 
 .message-input button:hover::after {

@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
   const navigate = useNavigate();
@@ -33,8 +34,9 @@ const Header = () => {
       <div className="button-bar">
         <button onClick={Files}>Files</button>
         <button onClick={LogOut}>
-          <FontAwesomeIcon icon="fa-solid fa-arrow-right-from-bracket" />
-          Sign Out</button>
+        <FontAwesomeIcon icon={faArrowRightFromBracket} />
+        {/* Sign Out */}
+        </button>
       </div>
     </header>
   );
