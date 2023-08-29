@@ -20,7 +20,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: var(--user-message-colour);
+  background-color: var(--button-colour);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -49,7 +49,7 @@
 }
 
 .message-input button:hover::after {
-  background-image: url("/public/images/dark_send.png");
+  /* background-image: url("/public/images/dark_send.png"); */
 }
 
 

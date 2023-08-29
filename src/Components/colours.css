@@ -1,11 +1,13 @@
 :root{
-  --hover-colour: #7299B3;
-  --darker-colour: #97B7CC;
+  --hover-colour: #1b549e;
+  --hover-chat-colour: #80a4d2;
+  --active-chat-colour: #97B7CC;
+  --button-colour: #226ed2;
   /* --user-message-colour: #7d5445; */
-  --user-message-colour: #455D7D;
+  --user-message-colour: #226ed2;
   --other-message-colour: #d2d2d2;
   --lighter-colour: #D6EFFF;
-  --background-colour: #e8f2fe;
+  --background-colour: rgb(251, 251, 251);
   --chat-background-colour: #ffffff;
   
 }

@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  background-color: var(--darker-colour);
+  background-color: var(--lighter-colour);
   color: #fff;
   user-select: none;
 }

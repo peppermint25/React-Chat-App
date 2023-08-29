@@ -12,6 +12,8 @@
   user-select: none;
   height: 100vh; /* Set the height to 100% */
   /* border-right: #7496B0 2px solid; */
+
+  transition: 0.5s ease;
 }
 
 @media screen and (min-width: 1500px) {
@@ -40,15 +42,16 @@
     flex-direction: row;
     gap: auto;
     border: none;
-    background-color: var(--user-message-colour);
+    background-color: var(--button-colour);
     color: white;
     border-radius: 10px;
     font-size: 30px;
     font-weight: 200;
     height: 100%;
-    padding: auto;
+    padding: 10px;
     align-items: center;
     margin-left: auto;
+    margin-right: 10px;
     /* width: 100%; */
     cursor: pointer;
     /* aspect-ratio: 1/1; */
@@ -67,13 +70,14 @@
   border-radius: 2.5px;
   gap: auto;
   margin: 4px;
+  border-radius: 5px;
   &:hover{
-    background-color: var(--hover-colour);
+    background-color: var(--hover-chat-colour);
   }
 }
 
 .RecentChat.active{
-  background-color: var(--darker-colour);
+  background-color: var(--active-chat-colour);
 }
 
 .chat-list{

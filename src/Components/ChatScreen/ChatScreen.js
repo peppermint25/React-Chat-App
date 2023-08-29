@@ -17,6 +17,9 @@ const InitialChats = [
       { sender: "user", text: "chat" },
       { sender: "user", text: "chat" },
       { sender: "user", text: "this is the last message aaa" },
+      { sender: "other", text: "Hi there!" },
+      { sender: "other", text: "Hi there!" },
+
     ],
   },
   {
